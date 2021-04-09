@@ -1,0 +1,9 @@
+---
+  - hosts: all
+    tasks:
+       - name: [copy] - copy file from local to the specified hosts
+         copy: 
+            src: source_location
+            dest: destination_location
+            mode: 0644
+            backup: yes
