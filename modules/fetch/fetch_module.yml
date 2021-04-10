@@ -1,0 +1,13 @@
+---
+  - hosts: app1
+    tasks:
+      - name: fetch file from the host and store them locally in the directory
+        fetch:
+          src: remote_location/file
+          dest: local_location
+
+# If fetch module is used with "become", ansible.builtin.slurp module will also be used to feth the contents
+# As a result, it doubles the transfer size and may end up with "MemoryError" 
+
+# dest :
+# Remote file is stored in the local directory with /host/path-to-file   
