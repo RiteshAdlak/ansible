@@ -1,2 +1,2 @@
-App1 ansible_host=
-App2 ansible_host=
+App1 ansible_host=host1
+App2 ansible_host=host2
