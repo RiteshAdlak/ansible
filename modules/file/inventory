@@ -1,0 +1,2 @@
+App1 ansible_host=<host1>
+App2 ansible_host=<host2>

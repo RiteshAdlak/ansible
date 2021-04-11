@@ -1,0 +1,31 @@
+---
+  - hosts: all
+    tasks:
+      - name: Change exisiting File ownership
+        file:
+          path: /root/path/file.txt
+          owner: root
+          group: root
+          mode: 0664
+
+      - name: Create a file
+        file:
+          path: /root/path/example.txt
+          state: touch
+          mode: 0664
+
+      - name: Create a directory
+        file:
+          path: /root/exmapleDir
+          state: directory
+          mode: 0755
+
+      - name: Remove file
+        file:
+          path: /root/path/example.txt
+          state: absent
+
+      - name: Remove directory recursively
+        file:
+          path: /root/exampleDir
+          state: absent
