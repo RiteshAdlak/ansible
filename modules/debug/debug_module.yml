@@ -1,0 +1,18 @@
+---
+  - hosts: all
+    gather_facts: yes
+    tasks:
+      - name: Debug Module in use
+        debug: 
+          msg: Print Statemetns during execution
+
+      - name: Get uptime of server
+        shell: /usr/bin/uptime
+        register: uptime_variable
+
+      - name: Print uptime variable
+        debug:
+          var: uptime_variable
+
+# gather_facts : values can be yes/no. Use to get the facts of remote hosts
+
